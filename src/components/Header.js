@@ -40,7 +40,7 @@ function Header() {
   InputWithIcons.displayName = "InputWithIcons";
 
   return (
-    <div className="bg-white/[67%] header smOnly:-mx-6 md:-mx-8">
+    <div className="bg-white/[67%] shadow-grayy smOnly:-mx-6 md:-mx-8">
       <div className="md:flex md:gap-[86px] gap-4 md:justify-center pt-[6px] pb-7">
         <Link href="/">
           <Image

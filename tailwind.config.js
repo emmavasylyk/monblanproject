@@ -15,7 +15,8 @@ module.exports = {
       notXl: { max: "1279.98px" },
     },
     boxShadow: {
-      grey: "0px 12px 24px 0px rgba(0, 0, 0, 0.12) inset, 0px 4px 24px 0px rgba(0, 0, 0, 0.12);", // class="shadow-grey"
+      grayy:
+        "0px 12px 24px 0px rgba(0, 0, 0, 0.12) inset, 0px 4px 24px 0px rgba(0, 0, 0, 0.12);", // class="shadow-grey"
     },
     fontFamily: {
       montserrat: ["Montserrat", "sans-serif"],
