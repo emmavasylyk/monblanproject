@@ -1,0 +1,33 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    boxShadow: {
+      grey: "0px 12px 24px 0px rgba(0, 0, 0, 0.12) inset, 0px 4px 24px 0px rgba(0, 0, 0, 0.12);", // class="shadow-grey"
+    },
+    fontFamily: {
+      montserrat: ["Montserrat", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"], // class="font-montserrat"
+      // exo: ['"Exo 2"', 'sans-serif'],
+    },
+    extend: {
+      colors: {
+        body: "#FAFAFA",
+        blue: "#3D8EDA",
+        grey: "#DEDEDE",
+        black: "#000000",
+        white: "#FFFFFF",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+    },
+  },
+  plugins: [],
+};
