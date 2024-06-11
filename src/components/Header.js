@@ -37,6 +37,8 @@ function Header() {
     )
   );
 
+  InputWithIcons.displayName = "InputWithIcons";
+
   return (
     <div className="md:flex md:gap-[86px] gap-4 md:justify-center pt-[6px] pb-7 bg-white/[67%] shadow-grey">
       <Link href="/">
