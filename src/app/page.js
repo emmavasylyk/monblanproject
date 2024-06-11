@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <TodoList />
+      <div className="container">
+        <TodoList />
+      </div>
     </main>
   );
 }

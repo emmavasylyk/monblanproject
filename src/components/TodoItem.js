@@ -10,15 +10,15 @@ function TodoItem({ item, viewMode }) {
     <li
       className={clsx(
         "bg-white",
-        viewMode === "rows" ? "flex items-center" : ""
+        viewMode === "rows" ? "flex items-center smOnly:gap-3" : ""
       )}
     >
       <Image
         src={item.image}
         className={clsx(
           viewMode === "rows"
-            ? "w-[86px] h-[86px] mr-[30px]"
-            : "w-[203px] h-[203px]"
+            ? "w-[86px] h-[86px] md:mr-[30px]"
+            : "w-full xl:max-w-[203px] min-w-[132px] md:min-w-[120px]"
         )}
         alt="image"
         width={86}
@@ -26,37 +26,47 @@ function TodoItem({ item, viewMode }) {
       />
       <div
         className={clsx(
-          viewMode === "rows" ? "flex items-center gap-[168px]" : "p-3"
+          viewMode === "rows"
+            ? "md:flex md:items-center xl:gap-[168px] md:gap-[120px]"
+            : "md:p-3 p-1"
         )}
       >
         <ul
           className={clsx(
             "flex",
-            viewMode === "rows" ? "gap-[160px]" : "justify-between mb-6"
+            viewMode === "rows"
+              ? "xl:gap-[160px] md:gap-[120px] smOnly:mb-2 gap-6 smOnly:flex-wrap"
+              : "justify-between mb-6"
           )}
         >
           {item.metrics.map((metric, index) => (
-            <li key={index}>
+            <li key={index} className={clsx(viewMode === "rows" ? "" : "")}>
               <p
                 className={clsx(
-                  "font-medium text-base",
-                  viewMode === "rows" ? "mb-2" : "mb-[7px]"
+                  "font-medium md:text-base text-sm",
+                  viewMode === "rows" ? "md:mb-2" : "mb-[7px]"
                 )}
               >
                 {metric.date}
               </p>
               <div
                 className={clsx(
-                  viewMode === "rows" ? "flex gap-[18px]" : "grid gap-[6px]"
+                  viewMode === "rows"
+                    ? "flex md:gap-[18px] gap-2"
+                    : "grid gap-[6px]"
                 )}
               >
                 <div className="flex items-center gap-[6px]">
                   <Heart className="w-[18px] h-[18px]" />
-                  <span className="font-medium text-sm">{metric.likes}</span>
+                  <span className="font-medium md:text-sm text-xs">
+                    {metric.likes}
+                  </span>
                 </div>
                 <div className="flex items-center gap-[6px]">
                   <Comment className="w-[18px] h-[18px]" />
-                  <span className="font-medium text-sm">{metric.comments}</span>
+                  <span className="font-medium md:text-sm text-xs">
+                    {metric.comments}
+                  </span>
                 </div>
               </div>
             </li>
@@ -64,11 +74,13 @@ function TodoItem({ item, viewMode }) {
         </ul>
         <div
           className={clsx(
-            viewMode === "rows" ? "" : "flex items-center justify-between"
+            viewMode === "rows"
+              ? "smOnly:flex smOnly:items-center smOnly:gap-3"
+              : "flex items-center justify-between"
           )}
         >
-          <p className="font-medium text-base">Image upload</p>
-          <p className="font-medium text-sm">{item.upload_date}</p>
+          <p className="font-medium md:text-base text-sm">Image upload</p>
+          <p className="font-medium md:text-sm text-xs">{item.upload_date}</p>
         </div>
       </div>
     </li>

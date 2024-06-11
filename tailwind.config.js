@@ -6,6 +6,14 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      xl: "1280px",
+      smOnly: { max: "767.98px" },
+      mdOnly: { min: "768px", max: "1279.98px" },
+      notXl: { max: "1279.98px" },
+    },
     boxShadow: {
       grey: "0px 12px 24px 0px rgba(0, 0, 0, 0.12) inset, 0px 4px 24px 0px rgba(0, 0, 0, 0.12);", // class="shadow-grey"
     },
@@ -26,6 +34,15 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1.5rem",
+          sm: "1.5rem",
+          md: "2rem",
+          xl: "2rem",
+        },
       },
     },
   },

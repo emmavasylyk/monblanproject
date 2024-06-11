@@ -8,4 +8,9 @@ body {
   background-repeat: no-repeat;
   background-size: auto, auto;
   background-position: top left, bottom 41px right;
+
+  @media screen and (min-width: 768px) and (max-width: 1279.9px) {
+    background-size: 500px auto, auto;
+    background-position: top left, bottom 41px right;
+  }
 }

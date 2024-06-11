@@ -19,7 +19,7 @@ function TodoList() {
   };
 
   return (
-    <div className="w-[836px] mx-auto pt-[18px] pb-[61px]">
+    <div className="xl:w-[836px] mx-auto pt-[18px] pb-[61px]">
       <div className="flex gap-[21px] justify-end mb-[23px]">
         <button
           type="button"
@@ -41,7 +41,7 @@ function TodoList() {
           "grid",
           viewMode === "rows"
             ? "gap-2 mb-[33px]"
-            : "grid-cols-4 gap-y-4 gap-x-2 mb-6"
+            : "xl:grid-cols-4 gap-y-4 gap-x-2 mb-6 md:grid-cols-3 grid-cols-2"
         )}
       >
         {data.slice(0, visibleCarts).map((item, index) => (
