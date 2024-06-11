@@ -14,6 +14,7 @@ function TodoItem({ item, viewMode }) {
       )}
     >
       <Image
+        quality={100}
         src={item.image}
         className={clsx(
           viewMode === "rows"
