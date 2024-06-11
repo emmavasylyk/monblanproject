@@ -26,14 +26,14 @@ function TodoList() {
           onClick={() => setViewMode("rows")}
           className={viewMode === "rows" ? "fill-blue" : "fill-[#C8C8C8]"}
         >
-          <Rows className="w-[22px] h-[22px]" />
+          <Tiles className="w-[24px] h-[22px]" />
         </button>
         <button
           type="button"
           onClick={() => setViewMode("tiles")}
           className={viewMode === "tiles" ? "fill-blue" : "fill-[#C8C7C7]"}
         >
-          <Tiles className="w-[24px] h-[22px]" />
+          <Rows className="w-[22px] h-[22px]" />
         </button>
       </div>
       <ul
