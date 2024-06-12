@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
+import clsx from "clsx";
+
 import Heart from "../../public/icons/heart.svg";
 import Comment from "../../public/icons/comment.svg";
-
-import clsx from "clsx";
 
 function TodoItem({ item, viewMode }) {
   return (
@@ -36,7 +36,7 @@ function TodoItem({ item, viewMode }) {
           className={clsx(
             "flex",
             viewMode === "rows"
-              ? "xl:gap-[160px] md:gap-[120px] smOnly:mb-2 gap-6 smOnly:flex-wrap"
+              ? "xl:gap-[160px] md:gap-[120px] smOnly:mb-2 gap-y-2 gap-x-6 smOnly:flex-wrap"
               : "justify-between mb-6"
           )}
         >

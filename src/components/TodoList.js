@@ -1,12 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import clsx from "clsx";
+
+import TodoItem from "./TodoItem";
 import data from "../../src/data/data.json";
 import Rows from "../../public/icons/rows.svg";
 import Tiles from "../../public/icons/tiles.svg";
-
-import TodoItem from "./TodoItem";
-
-import clsx from "clsx";
 
 function TodoList() {
   const [viewMode, setViewMode] = useState("rows");
@@ -19,7 +18,7 @@ function TodoList() {
   };
 
   return (
-    <div className="xl:w-[836px] mx-auto pt-[18px] pb-[61px]">
+    <section className="xl:w-[836px] mx-auto pt-[18px] pb-[61px]">
       <div className="flex gap-[21px] justify-end mb-[23px]">
         <button
           type="button"
@@ -62,7 +61,7 @@ function TodoList() {
       >
         {visibleCarts >= totalCarts ? "NO MORE" : "LOAD MORE"}
       </button>
-    </div>
+    </section>
   );
 }
 
