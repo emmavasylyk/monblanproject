@@ -18,7 +18,7 @@ function TodoItem({ item, viewMode }) {
         src={item.image}
         className={clsx(
           viewMode === "rows"
-            ? "w-[86px] h-[86px] md:mr-[30px]"
+            ? "w-[86px] h-[86px] md:mr-[30px] xsOnly:h-auto xsOnly:w-full"
             : "w-full xl:max-w-[203px] min-w-[132px] md:min-w-[120px]"
         )}
         alt="image"
@@ -28,7 +28,7 @@ function TodoItem({ item, viewMode }) {
       <div
         className={clsx(
           viewMode === "rows"
-            ? "md:flex md:items-center xl:gap-[168px] md:gap-[120px]"
+            ? "flex items-center smOnly:flex-wrap xl:gap-[168px] md:gap-[120px] extra:!gap-x-6"
             : "md:p-3 p-1"
         )}
       >
@@ -36,8 +36,8 @@ function TodoItem({ item, viewMode }) {
           className={clsx(
             "flex",
             viewMode === "rows"
-              ? "xl:gap-[160px] md:gap-[120px] smOnly:mb-2 gap-y-2 gap-x-6 smOnly:flex-wrap"
-              : "justify-between mb-6"
+              ? "xl:gap-[160px] md:gap-[120px] smOnly:mb-2 gap-y-2 gap-x-6 smOnly:flex-wrap extra:!mb-0 "
+              : "justify-between mb-6 "
           )}
         >
           {item.metrics.map((metric, index) => (
@@ -76,7 +76,7 @@ function TodoItem({ item, viewMode }) {
         <div
           className={clsx(
             viewMode === "rows"
-              ? "smOnly:flex smOnly:items-center smOnly:gap-3"
+              ? "smOnly:flex smOnly:items-center smOnly:gap-3 xsOnly:flex-col xsOnly:!items-start xsOnly:!gap-0 extra:flex-col extra:!gap-0 extra:!items-start"
               : "flex items-center justify-between"
           )}
         >

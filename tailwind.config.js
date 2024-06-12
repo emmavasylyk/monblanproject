@@ -10,6 +10,8 @@ module.exports = {
       sm: "480px",
       md: "768px",
       xl: "1280px",
+      xsOnly: { max: "344px" },
+      extra: { min: "464px", max: "767.98px" },
       smOnly: { max: "767.98px" },
       mdOnly: { min: "768px", max: "1279.98px" },
       notXl: { max: "1279.98px" },
@@ -20,8 +22,7 @@ module.exports = {
     },
     fontFamily: {
       montserrat: ["Montserrat", "sans-serif"],
-      roboto: ["Roboto", "sans-serif"], // class="font-montserrat"
-      // exo: ['"Exo 2"', 'sans-serif'],
+      roboto: ["Roboto", "sans-serif"],
     },
     extend: {
       colors: {
